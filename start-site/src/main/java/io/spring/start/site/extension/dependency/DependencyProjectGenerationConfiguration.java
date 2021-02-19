@@ -23,6 +23,7 @@ import io.spring.initializr.generator.io.template.MustacheTemplateRenderer;
 import io.spring.initializr.generator.project.ProjectGenerationConfiguration;
 import io.spring.initializr.generator.spring.build.gradle.ConditionalOnGradleVersion;
 import io.spring.initializr.metadata.InitializrMetadata;
+import io.spring.start.site.extension.dependency.andamio.AndamioBuildCustomizer;
 import io.spring.start.site.extension.dependency.flyway.FlywayProjectContributor;
 import io.spring.start.site.extension.dependency.liquibase.LiquibaseProjectContributor;
 import io.spring.start.site.extension.dependency.lombok.LombokGradleBuildCustomizer;
@@ -34,7 +35,6 @@ import io.spring.start.site.extension.dependency.springsecurity.SpringSecurityRS
 import io.spring.start.site.extension.dependency.springsecurity.SpringSecurityTestBuildCustomizer;
 import io.spring.start.site.extension.dependency.springsession.SpringSessionBuildCustomizer;
 import io.spring.start.site.extension.dependency.thymeleaf.ThymeleafBuildCustomizer;
-
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -83,6 +83,11 @@ public class DependencyProjectGenerationConfiguration {
 	@ConditionalOnRequestedDependency("lombok")
 	public LombokGradleBuildCustomizer lombokGradleBuildCustomizer() {
 		return new LombokGradleBuildCustomizer(this.metadata);
+	}
+
+	@Bean
+	public AndamioBuildCustomizer andamioBuildCustomizer() {
+		return new AndamioBuildCustomizer();
 	}
 
 	@Bean

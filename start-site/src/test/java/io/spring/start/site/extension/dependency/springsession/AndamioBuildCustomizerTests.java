@@ -28,7 +28,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  *
  * @author Stephane Nicoll
  */
-class SpringSessionBuildCustomizerTests extends AbstractExtensionTests {
+class AndamioBuildCustomizerTests extends AbstractExtensionTests {
 
 	private static final Dependency REDIS = Dependency.withId("session-data-redis", "org.springframework.session",
 			"spring-session-data-redis");
