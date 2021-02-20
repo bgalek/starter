@@ -245,6 +245,15 @@ initializr:
           artifactId: spring-session-core
           description: Provides an API and implementations for managing user session information.
           starter: false
+        - name: Andamio
+          id: andamio
+          description: Andamio description
+          groupId: pl.allegro
+          artifactId: andamio
+          starter: false
+          links:
+            - rel: reference
+              href: https://allegro.pl
         - name: Rest Repositories HAL Explorer
           id: data-rest-explorer
           description: Browsing Spring Data REST repositories in your browser.
@@ -462,15 +471,6 @@ initializr:
           links:
             - rel: reference
               href: https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#howto-execute-liquibase-database-migrations-on-startup
-        - name: Andamio
-            id: andamio
-            description: Andamio description
-            groupId: pl.allegro
-            artifactId: andamio
-            starter: false
-            links:
-              - rel: reference
-                href: https://allegro.pl
         - name: Flyway Migration
           id: flyway
           description: Version control for your database so you can migrate from any version (incl. an empty database) to the latest version of the schema.
